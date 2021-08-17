@@ -1,16 +1,20 @@
-# This is a sample Python script.
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+print("Welcome to Treasure Island. Your mission is to find the treasure.")
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+choice1 = input("You are at a crossroads. Would you like to go left or right?\n")
+if choice1 == "left":
+    choice2 = input("There is a lake before you. Would you like to swim or wait?\n")
+    if choice2 == "wait":
+        choice3 = input("You wait until night and the moonlight illuminates an invisible bridge. "
+                        "On the other side there are three doors.\n"
+                        "Which door would you like to enter? red, blue, or yellow?\n")
+        if choice3 == "red":
+            print("There is an apple on a pedestal. You consume it and find it to be poisoned. Game Over")
+        elif choice3 == "yellow":
+            print("Congratulations!! You found the treasure!")
+        else:
+            print("You walk in on a trio of trolls enjoying dinner and you've just been added to the menu. Game Over")
+    else:
+        print("Oh no, the lake is filled with crocodiles! Game Over")
+else:
+    print("You have walked off a cliff. Game Over")
